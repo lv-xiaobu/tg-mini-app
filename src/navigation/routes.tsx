@@ -1,4 +1,4 @@
-import type { ComponentType, JSX } from 'react';
+import type { ComponentType } from 'react';
 
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
 import { InitDataPage } from '@/pages/InitDataPage/InitDataPage';
