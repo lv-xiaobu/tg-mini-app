@@ -3,7 +3,7 @@ import { mockTelegramEnv, parseInitData, retrieveLaunchParams } from '@tma.js/sd
 // It is important, to mock the environment only for development purposes. When building the
 // application, import.meta.env.DEV will become false, and the code inside will be tree-shaken,
 // so you will not see it in your final bundle.
-if (import.meta.env.DEV) {
+// if (import.meta.env.DEV) {
   let shouldMock: boolean;
 
   // Try to extract launch parameters to check if the current environment is Telegram-based.
@@ -23,7 +23,7 @@ if (import.meta.env.DEV) {
   if (shouldMock) {
     const initDataRaw = new URLSearchParams([
       ['user', JSON.stringify({
-        id: 99281932,
+        id: 0o0,
         first_name: 'Andrew',
         last_name: 'Rogue',
         username: 'rogue',
@@ -65,4 +65,4 @@ if (import.meta.env.DEV) {
       'As long as the current environment was not considered as the Telegram-based one, it was mocked. Take a note, that you should not do it in production and current behavior is only specific to the development process. Environment mocking is also applied only in development mode. So, after building the application, you will not see this behavior and related warning, leading to crashing the application outside Telegram.',
     );
   }
-}
+// }
